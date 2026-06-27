@@ -265,7 +265,7 @@
         }
 
         .img {
-            background-image: url(tlo.jpg);
+            background-image: url(tlo.webp);
             height: 100vh;
             width: 100%;
             background-size: cover;
