@@ -1,0 +1,462 @@
+
+        /* ===== RESET ===== */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== BASE ===== */
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ===== MEDIA ===== */
+
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+
+        /*=================================================== variables for css================================================================== */
+        :root {
+            /*============ navbar============ */
+            --font-scale-nav: clamp(1rem, 1vw + 0.5rem, 1.4rem);
+            --nav-padding: clamp(1rem, 2vw, 2rem);
+            --links-gap: clamp(1rem, 3vw, 2.5rem);
+            --nav-bg-color: #FFFFFF;
+            --nav-color-links-hover: #5b563b;
+            --nav-color-logo: #66503d;
+            /* ============heropage========= */
+            --hero-padding: clamp(1.5rem, 3vw + 0.75rem, 2.5rem);
+            --font-scale-hero: clamp(1rem, 1vw + 0.5rem, 1.4rem);
+            --hero-bg-color: #F2DCC9;
+            /* ==============Service=============== */
+            --service-padding: clamp(2rem, 3vw + 0.5rem, 3rem);
+            --service-h2: clamp(2rem, 2vw + 0.5rem, 2.5rem);
+            /* ==============why us=============== */
+            --whyus-bg-color: #E6D4C5;
+            --whyus-font-s: clamp(1.2rem, 1vw + 0.5rem, 1.5rem);
+            --whyus-number: clamp(2rem, 3vw + 0.5rem, 3rem);
+            --whyus-h3: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
+            /* ============note================= */
+            --note-padding: clamp(1rem, 3vw + 1.5rem, 3rem);
+            /* =================above============= */
+            --above-footer-padding: clamp(1rem, 2vw + 1.5rem, 2.5rem);
+            --font-above-footer: clamp(1rem, 1vw + 0.5rem, 1.8rem);
+            --font-above-span: clamp(2.5rem, 5vw + 4.5rem, 6.4rem);
+            /* ==============footer============= */
+            --bg-footer: #FCF3EB;
+
+        }
+
+        /* ====== hero section ======= */
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--nav-padding);
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 1rem;
+            background-color: var(--nav-bg-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+            z-index: 10;
+
+        }
+
+        .nav-bar>a {
+            font-size: calc(var(--font-scale-nav)* 1.25);
+            color: var(--nav-color-logo);
+            font-weight: 700;
+        }
+
+        .ul-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--links-gap);
+        }
+
+        .ul-nav>li>a {
+            font-size: var(--font-scale-nav);
+            font-weight: 400;
+
+            flex: 1 1 350px;
+            justify-content: flex-end;
+        }
+
+        /* ================= */
+        .hero-contain {
+            min-height: 110vh;
+            width: 100%;
+            background-image: url(copywriting-warszawa-prof.webp);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            padding: clamp(1rem, 1.5rem, 2rem);
+        }
+
+        .anime-opacity {
+            background-color: var(--hero-bg-color);
+            padding: var(--hero-padding);
+            width: min(500px, 100%);
+            font-size: var(--font-scale-hero);
+            align-self: flex-end;
+            margin-left: auto;
+            box-shadow: 2px 4px 6px -1px rgba(0, 0, 0, 0.1), 2px 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+        }
+
+        /* ========================>   service   <========================= */
+
+        .service {
+            padding: var(--service-padding);
+            background-color: var(--nav-bg-color);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contain-para {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .service-partition {
+            width: 5px;
+            background-color: #0d0707;
+            height: 200px;
+        }
+
+        .service-para {
+            width: min(275px, 100%);
+            padding: var(--nav-padding);
+            letter-spacing: 1.5px;
+            font-size: var(--font-scale-nav);
+            line-height: 1.6;
+            text-align: right;
+        }
+
+        .service-para-2 {
+            text-align: left;
+            width: min(275px, 100%);
+            padding: var(--nav-padding);
+            letter-spacing: 1.5px;
+            font-size: var(--font-scale-nav);
+            line-height: 1.6;
+        }
+
+        .service-h2 {
+            padding: var(--service-padding) - 0.5rem;
+            font-size: var(--service-h2);
+            font-weight: 300;
+
+        }
+
+        /* ============why-us================ */
+        .why-us {
+            width: 100%;
+            padding: var(--hero-padding);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: var(--whyus-bg-color);
+
+        }
+
+        .why-us-child {
+            text-align: center;
+            padding: var(--nav-padding);
+            width: min(250px, 100%);
+        }
+
+        .number-why-us {
+            font-size: var(--whyus-number);
+        }
+
+        .why-us-p {
+            font-size: var(--whyus-font-s);
+        }
+
+        .why-us-h3 {
+            font-size: var(--whyus-h3);
+        }
+
+        /* ====extra===== */
+        .extra {
+            max-height: 25vh;
+            background-color: var(--nav-bg-color);
+            padding: 3rem 1.5rem;
+
+        }
+
+        .note {
+            width: min(450px, 100%);
+            position: relative;
+            z-index: 2;
+            top: 30px;
+            background-color: var(--hero-bg-color);
+            padding: var(--note-padding);
+            font-size: var(--font-scale-nav);
+            align-items: center;
+            box-shadow: 2px 4px 6px -1px rgba(0, 0, 0, 0.1), 2px 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .note-ul>li {
+            padding: 1rem 0;
+        }
+
+        .note-h2 {
+            padding: var(--note-padding) 0;
+        }
+
+        .note-btn {
+            margin-left: var(--note-padding) 0;
+            padding: var(--nav-padding);
+            background-color:rgb(199, 162, 142);
+            border: none;
+        }
+
+        .img-view {
+            height: 100vh;
+            width: 100%;
+            background-color: transparent;
+
+        }
+
+        .img {
+            background-image: url(tlo.jpg);
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            z-index: -1;
+        }
+
+        /* ===================Above footer===================== */
+
+
+
+        .above-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: var(--above-footer-padding);
+            background-color: #FFFFFF;
+
+        }
+
+        .card-above {
+            text-align: center;
+            padding: var(--nav-padding);
+            width: min(250px, 100%);
+            font-size: var(--font-above-footer);
+        }
+
+        .card-above>span {
+            font-size: var(--font-above-span);
+            padding: var(--above-footer-padding);
+        }
+
+        /* ===================footer================== */
+        footer {
+            padding: var(--above-footer-padding);
+            gap: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: var(--bg-footer);
+        }
+
+        .footer-social-links>a>i {
+            padding: var(--nav-padding);
+            font-size: 1.5rem;
+        }
+
+        .footer-logo {
+            padding: var(--nav-padding);
+            font-size: var(--font-scale-hero);
+        }
+
+        /* ================================================================================================================================== */
+
+       
+        @media (max-width: 575px) {
+            .nav-bar {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .ul-nav {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            .anime-opacity {
+                margin: auto;
+                align-self: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .contain-para {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .service-partition {
+                width: 80%;
+                height: 2px;
+                margin: 1rem 0;
+            }
+
+            .service-para,
+            .service-para-2 {
+                text-align: center;
+                padding: 1rem;
+                width: 100%;
+            }
+
+            .extra {
+                max-height: none;
+                padding: 2rem 1rem;
+            }
+
+            .note {
+                top: 0;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 1.5rem;
+            }
+        }
+
+        
+        @media (min-width: 576px) and (max-width: 767px) {
+            .nav-bar {
+                justify-content: center;
+            }
+
+            .ul-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contain-para {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .service-partition {
+                width: 80%;
+                height: 2px;
+                margin: 1rem 0;
+            }
+
+            .service-para,
+            .service-para-2 {
+                text-align: center;
+                width: 90%;
+            }
+
+            .extra {
+                max-height: none;
+                padding: 2rem 1.5rem;
+            }
+
+            .note {
+                top: 0;
+                margin: 0 auto;
+            }
+
+            footer {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        
+        @media (min-width: 768px) and (max-width: 991px) {
+            .contain-para {
+                gap: 1.5rem;
+            }
+
+            .service-para,
+            .service-para-2 {
+                width: 45%;
+                padding: 0.5rem;
+            }
+
+            .extra {
+                max-height: none;
+                padding: 3rem 1.5rem;
+            }
+
+            .note {
+                top: 0;
+                margin: 0 auto;
+            }
+        }
+
+       
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .ul-nav {
+                gap: 1rem;
+            }
+
+            .service-para,
+            .service-para-2 {
+                padding: 1rem;
+            }
+        }
+  
